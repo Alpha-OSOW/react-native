@@ -54,6 +54,48 @@
         })
         // e === undefined
 
+        const tab = [1,2,3,1,1,3] ; // quelle est la position de tous les 1 dans le tableau
+
+        // [0,3,4]
+        const position1 = [] 
+        for(let i = 0 ; i < tab.length ; i++){
+            if(tab[i] === 1){
+                position1.push(i)
+            }
+        }
+        console.log(position1);
+
+        // solution 2
+        const position1bis = []
+        tab.forEach(function(item, index){
+            if(item === 1){
+                position1bis.push(index)
+            }
+        })
+        console.log(position1bis);
+
+        // solution3 avec indexOf() et delete 
+        const position1ter = [] 
+        for(let i = 0 ; i < tab.length ; i++){
+            if(tab[i] === 1){
+                position1ter.push(tab.indexOf(tab[i]))
+                delete tab[i] ; 
+            }
+        }
+        console.log(tab); 
+        console.log(position1ter);
+
+        // chainage 
+
+        const etudiants = [
+            {nom : "Alain" , notes : [1, 12, 20 , 15]},
+            {nom : "Béatrice" , notes : [6, 9, 14 , 8]},
+        ];
+
+        // me donner la liste des étudiants qui ont une moyenne > 10 
+
+        
+
 
 
     </script>
