@@ -9,6 +9,9 @@ http://formation.webdevpro.net/react-native
 login : react-native
 password : facebook
 
+https://formation.webdevpro.net/js-initiation
+        // login : js
+        // password : initiation
 ----------------------------
 
 Bravo !!! 
