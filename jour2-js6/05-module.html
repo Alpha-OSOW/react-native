@@ -7,6 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-        
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        // IIFE => Immediately Invoqued Fonction Expression
+        (function(){
+            const a = []
+        })()
+    </script>
+    <script>
+        (function(){
+            const a = []
+        })()
+        // google analytics => 
+        {
+            const a = []
+            console.log(a)
+        }
+        {
+            const a = []
+            console.log(a)
+        }
+    </script>
+    <!-- nouvelle manière de faire -->
+    <script type="module">
+        const a = []
+        // scope a est limité à la balise script 
+    </script>
+    <script type="module">
+        const a = []
+    </script>
+    <script type="module">
+        // ./ => dans le même dossier que 05-module.html
+        // { } destructuration 
+        import { calcul , a } from "./05-calcul.js" // src="05-calcul.js"
+        calcul(); 
+        console.log(a)
+    </script> 
+
+
 </body>
 </html>
