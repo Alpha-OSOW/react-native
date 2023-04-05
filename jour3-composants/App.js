@@ -7,6 +7,8 @@ export default function App() {
       <View style={styles.zone1}> 
           <Text style={{fontSize : 30}}>premier</Text>
           <Text>deuxieme</Text>
+          <Text>troisieme</Text>
+
     </View>
 
           <View style={{backgroundColor : "blue" , flex : 2 , width : "100%" }}/>
