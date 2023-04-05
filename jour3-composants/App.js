@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {styles} from "./style"
 
+const carre = { width : 120 , height: 120, marginBottom : 20}
 export default function App() {
   return (
     <View style={styles.container}>
@@ -9,7 +11,18 @@ export default function App() {
               <Text>deuxieme</Text>
               <Text>troisieme</Text>
             </View>
+            <View style={ {flex : 3 , backgroundColor : "green", flexDirection : "row" , 
+                   flexWrap : "wrap", justifyContent : "space-around", paddingTop : 20 }}>
+              <View style={[ {backgroundColor : "white"}, carre]} />
+              <View style={[ {backgroundColor : "pink"}, carre]} />
+              <View style={[ {backgroundColor : "purple"}, carre]} />
+              <View style={[ {backgroundColor : "maroon"}, carre]} />
+              <View style={[ {backgroundColor : "white"}, carre]} />
+              <View style={[ {backgroundColor : "lightgrey"}, carre]} />
+              
 
+
+            </View>
             <View style={{ backgroundColor : "blue" , flex : 2 , width:"100%" , justifyContent: "space-between" }} >
               <View style={{ flexDirection : "row" , justifyContent: "space-between" }}>
                 <Text style={{color : "white"}}>Premier</Text>
@@ -23,7 +36,7 @@ export default function App() {
             </View>
           
             <View style={{ backgroundColor : "yellow" , flex : 0.5 , width:"100%" , flexDirection : "row", 
-            alignItems :"center", justifyContent : "space-around"}} >
+             alignItems :"center", justifyContent : "space-around"}} >
                       <Text style={[styles.color2 , styles.menu]}>Accueil</Text>
                       <Text style={[styles.color , styles.menu]}>Profil</Text>
 
@@ -33,48 +46,3 @@ export default function App() {
     </View>
   );
 }
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      marginTop : 25,
-      backgroundColor: '#fff',
-      // flexDirection: "column"
-      },
-      color : {
-        color : "red"
-      },
-      
-      color2 : {
-        color : "blue"
-      },
-
-      menu : {
-        fontSize : 20 ,
-        borderBottomWidth : 1 ,
-        borderBottomColor : "red",
-      },
-      zone1: {
-          backgroundColor : "red",
-          flex : 1 ,
-          width : "100%", 
-          flexDirection : "row",
-          justifyContent : "space-around" ,  /* attention justifyContent centerer horizontalement SI flexDirection: "row" par défaut  justifyContent: "center" va centrer Verticalement
-          flex-start
-          flex-end
-          center 
-          space-evenly
-          space-between
-          space-around
-        */ 
-          alignItems: "baseline" // verticalement SI flexDirection: "row" ,  par contre si on est sur flexDirection: "column" permet de gérer l'espacement horizontalement 
-          // flex-start
-          // flex-end
-          // center
-          // baseline
-        }
-        // cas pratique :
-        // dans la zone bleue
-        // Ajouter dans cette zone 4 textes premier deuxieme troisieme et quatrieme
-        // caller chaque mot dans un coin de cette zone
-  });
