@@ -24,9 +24,8 @@ export default function App() {
           
             <View style={{ backgroundColor : "yellow" , flex : 0.5 , width:"100%" , flexDirection : "row", 
             alignItems :"center", justifyContent : "space-around"}} >
-              <Text>Accueil</Text>
-              <Text style={[styles.color , styles.menu]}>Profil</Text>
-
+                      <Text style={[styles.color2 , styles.menu]}>Accueil</Text>
+                      <Text style={[styles.color , styles.menu]}>Profil</Text>
 
             </View>
             {/*<StatusBar hidden={true} />*/}
@@ -35,47 +34,47 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop : 25,
-    backgroundColor: '#fff',
-     // flexDirection: "column"
-    },
-    color : {
-      color : "red"
-    },
-    
-    color2 : {
-      color : "blue"
-    },
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      marginTop : 25,
+      backgroundColor: '#fff',
+      // flexDirection: "column"
+      },
+      color : {
+        color : "red"
+      },
+      
+      color2 : {
+        color : "blue"
+      },
 
-    menu : {
-      fontSize : 20 ,
-      borderBottomWidth : 1 ,
-      borderBottomColor : "red",
-
-    zone1: {
-    backgroundColor : "red",
-    flex : 1 ,
-    width : "100%", 
-    flexDirection : "row",
-    justifyContent : "space-around" ,  /* attention justifyContent centerer horizontalement SI flexDirection: "row" par défaut  justifyContent: "center" va centrer Verticalement
-    flex-start
-    flex-end
-    center 
-    space-evenly
-    space-between
-    space-around
-  */ 
-    alignItems: "baseline" // verticalement SI flexDirection: "row" ,  par contre si on est sur flexDirection: "column" permet de gérer l'espacement horizontalement 
-    // flex-start
-    // flex-end
-    // center
-    // baseline
-  }
-  // cas pratique :
-  // dans la zone bleue
-  // Ajouter dans cette zone 4 textes premier deuxieme troisieme et quatrieme
-  // caller chaque mot dans un coin de cette zone
+      menu : {
+        fontSize : 20 ,
+        borderBottomWidth : 1 ,
+        borderBottomColor : "red",
+      },
+      zone1: {
+          backgroundColor : "red",
+          flex : 1 ,
+          width : "100%", 
+          flexDirection : "row",
+          justifyContent : "space-around" ,  /* attention justifyContent centerer horizontalement SI flexDirection: "row" par défaut  justifyContent: "center" va centrer Verticalement
+          flex-start
+          flex-end
+          center 
+          space-evenly
+          space-between
+          space-around
+        */ 
+          alignItems: "baseline" // verticalement SI flexDirection: "row" ,  par contre si on est sur flexDirection: "column" permet de gérer l'espacement horizontalement 
+          // flex-start
+          // flex-end
+          // center
+          // baseline
+        }
+        // cas pratique :
+        // dans la zone bleue
+        // Ajouter dans cette zone 4 textes premier deuxieme troisieme et quatrieme
+        // caller chaque mot dans un coin de cette zone
   });
