@@ -1,0 +1,20 @@
+// créer un nouveau composant Diapositive 
+// ce composant contient un composant Image dont largeur est de 100 et hauteur de 100
+// l'uri de l'image va être transmis par une props uri du parent (App)
+
+// dans le composant Parent "App" => créer un tableau galerie qui contient les valeurs suivantes :
+// ["https://source.unsplash.com/random/200x100" , "https://source.unsplash.com/random/200x101", "https://source.unsplash.com/random/200x102"]
+
+// dans la vue du composant App faire une boucle .map() sur chaque élément du tableau et envoyé l'url comme props du composant Diapositive
+
+
+=> bon appetit 13h40 !!
+cas pratique :
+créer un nouveau composant qui s'appelle Like
+dans ce composant
+image svg en forme de like => https://icons.getbootstrap.com/icons/hand-thumbs-up-fill/
+un chiffre à côté 
+attention image onPress n'existe pas => 
+il faut entourer l'image svg du composant TouchableWithoutFeedback 
+
+si vous cliquez l'image en forme de pouce => augmenter le chiffre à côté du pouce de + 1 
