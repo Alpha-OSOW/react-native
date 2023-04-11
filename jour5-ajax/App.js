@@ -2,9 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View , Button} from 'react-native';
 import Mounted from './composants/Mounted';
 import Updated from './composants/Update';
-import { useState } from "react"
+import { useState } from "react";
 import Unmounted from './composants/Unmounted';
 import Cocktails from './composants/Cocktails';
+import Pays from "./composants/Pays"
 export default function App() {
 
  /*  function texteLong(){
@@ -17,7 +18,8 @@ export default function App() {
   const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
-      <Cocktails />
+      <Pays />
+      { false && <Cocktails /> }
       {/*<ScrollView>
         <Text>{texteLong()}</Text>
       </ScrollView> */}
