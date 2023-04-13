@@ -5,20 +5,26 @@ import B from './composant/B';
 import Exo from './composant/Exo';
 import Exo2 from './composant/Exo2';
 import { ExoContextProvider } from './contexts/exoContext';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import C from './composant/C';
 
 export default function App() {
   return (
-    <ExoContextProvider>
-      <View style={styles.container}>
-        <Exo2 />
-        {false && <>
-          <Exo />
-          <A />
-          <B />
-        </>}
-        <StatusBar style="auto" />
-      </View>
-    </ExoContextProvider>
+    <Provider store={store}>
+        <ExoContextProvider>
+          <View style={styles.container}>
+              <C />
+            {false && <>
+              <Exo2 />
+              <Exo />
+              <A />
+              <B />
+            </>}
+            <StatusBar style="auto" />
+          </View>
+        </ExoContextProvider>
+    </Provider>
   );
 }
 
