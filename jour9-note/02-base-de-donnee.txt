@@ -25,3 +25,40 @@ DELETE FROM articles WHERE id = 1
 -------------------
 mettre à jour la ligne numéro 1 
 UPDATE articles SET titre = "..." , contenu = "...." WHERE id = 1 ; 
+
+créer un composant formulaire 
+
+vous allez avoir deux champ TextInput 
+titre / contenu 
+button 
+récupérer les valeurs saisies dans chaque champ via le state local 
+
+rdv 10h45 bon café !!!!
+
+
+cas pratique supprimer 
+associer une fonction qui s'appelle supprimer qui aura un paramètre id (de l'article à supprimer)
+
+dans le fonction supprimer 
+réaliser une transaction 
+la requête a exécuter => DELETE FROM articles WHERE id = ? 
+utilisez le tableau de variable pour lui passer l'id concerné 
+
+réaliser une deuxieme transaction SELECT * => setArticle => mise de la vue 
+
+
+cas pratique modifier 
+
+créer un context articleContext 
+
+{ titre : "" , contenu : "" , id : 0}
+
+fonction modifier => cette fonction afficher l'article que vous voulez modifier dans la console 
+
+lorsque vous cliquez sur le bouton modifier => 
+
+------------------------
+
+cas pratique 
+
+remplir le formulaire avec les données récupérée lorsque l'on a cliqué

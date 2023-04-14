@@ -4,6 +4,7 @@ import * as SQLITE from "expo-sqlite"
 import {useEffect , useState} from "react"
 import Form from './composant/Form';
 import Articles from './composant/Articles';
+import { ArticleContextProvider } from './context/articleContext'
 
 function openDB(){
   if(Platform.OS === "web"){
@@ -43,12 +44,14 @@ export default function App() {
   } , [])
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.titre}>Utiliser SQLITE dans React Native</Text>
-      <Form db={db} useForceUpdate={useForceUpdate}/>
-      <Articles db={db} useForceUpdate={useForceUpdate}/>
-      <StatusBar style="auto" />
-    </View>
+    <ArticleContextProvider>
+      <View style={styles.container}>
+        <Text style={styles.titre}>Utiliser SQLITE dans React Native</Text>
+        <Form db={db} />
+        <Articles db={db} />
+        <StatusBar style="auto" />
+      </View>
+    </ArticleContextProvider>
   );
 }
 
